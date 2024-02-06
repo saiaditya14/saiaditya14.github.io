@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #111;
+    transition: background-color 0.3s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+#navbar-container {
+    background-color: #222;
+    transition: background-color 0.3s ease;
+    display: flex; /* Set the navbar container to display as a flex container */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Set the list items to display in a row */
+    width: 100%; /* Make the ul take 100% width */
+    font-size: 100%;
+    justify-content: space-around;
+}
+
+li {
+    text-align: left; /* Align text within li from left to right */
+    font-size: 100%;
+    /*flex-grow: 1;*/
+    
+}
+
+a {
+    display: block;
+    color: white;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+body.light-mode #navbar-container {
+    background-color: #ddd; /* Lighter background color */
+}
+
+body.light-mode a {
+    color: #222; /* Darker color for the links in light mode */
+}
+
+body.light-mode a:hover {
+    background-color: #ccc; /* Darker color on hover in light mode */
+}
+
+#toggle-mode-button {
+    background-color: #444; /* Darker color by default */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+body.light-mode {
+    background-color: #fff; /* Lighter than navbar color */
+}
+
+.content-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 5vw;
+    color: #fff; /* Default text color, assumed to be white */
+    display: flex; /* Use flexbox to control layout */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    justify-content: space-between; /* Align items to the start and end of the container */
+}
+
+/* Light mode styles - applied when 'light-mode' class is present on body */
+body.light-mode .content-container {
+    color: #000; /* Black text color in light mode */
+}
+
+/* Dark mode styles - applied when 'dark-mode' class is present on body */
+body.dark-mode .content-container {
+    color: #fff; /* White text color in dark mode */
+}
+
+#about-me {
+    flex-basis: 100%; /* Adjust the width of the about-me section */
+    margin-top: 1vw;
+    font-family: 'Lora', serif;
+    font-size: 1.6vw;
+}
+
+/* Add a media query for smaller screens (e.g., phones) */
+@media (max-width: 600px) {
+    .content-container {
+        padding: 10px;
+        font-size: 1vw;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    #about-me {
+        flex-basis: 100%; /* Take up full width on smaller screens */
+        margin-top: 20px;
+    }
+}
+
+.mid-size-image {
+    flex-basis: 100%; /* Take up full width */
+    text-align: center; /* Align the image to the center */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.mid-size-image img {
+    width: 60%; /* Adjust the width of the image */
+    max-width: 500px; /* Set a maximum width for responsiveness */
+}
+
+.social-buttons {
+    display: flex;
+}
+
+.blog-body {
+    background-color: var(--background-color);
+}
+
+.blog-overall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1vw;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    align-items: space-around;
+    width: 70vw;
+    padding-left: 4%;
+    background-color: var(--background-blogs);
+}
+
+
+
+.blog-text {
+    font-size: 140%;
+    font-family: cursive;
+    color: grey;
+}
+
+.align-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fa-heart {
+    color: var(--heart-background);
+}
+
+.heart {
+    padding-right: 5%;
+    color: grey;
+}
+
+.likes-container {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    padding-bottom: 3vh;
+    margin-bottom: 3vh;
+}
+
+.like-count {
+    font-size: 150%;
+    color: grey;
+    margin-left: 50%;
+}
+
+.comments-flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 2vw;
+}
+
+.comments-heading {
+    text-align: left;
+    color: grey;
+    font-size: 200%;
+    padding-bottom: 2vw;
+}
+
+.comments-body {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    justify-content: space-around;
+}
+
+.comment-user {
+    color: rgb(82, 82, 248);
+}
+
+.comments-text {
+    color: grey;
+    background-color: var(--background-blogs);
+    font-size: 125%;
+    font-family: cursive;
+    padding-bottom: 2vw;
+}
+
+.comments-count {
+    color: var(--link-color);
+    font-size: 140%;
+}
+
+.button-styling {
+    width: auto;
+    height: 6lvh;
+    background-color: rgb(184, 137, 145);
+    font-size: 150%;
+    color: var(--link-color);
+}
+
+.change-like {
+    --heart-background: red;
+}
