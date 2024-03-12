@@ -120,6 +120,7 @@ body.dark-mode .content-container {
 
 .mid-size-image img {
     width: 60%; /* Adjust the width of the image */
+    transform: rotate(-30deg);
     max-width: 500px; /* Set a maximum width for responsiveness */
 }
 
