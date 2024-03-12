@@ -118,9 +118,12 @@ body.dark-mode .content-container {
     margin-top: 20px; /* Adjust as needed */
 }
 
+. mid-size-image:hover {
+    transform: rotate(-30deg);
+}
+
 .mid-size-image img {
     width: 60%; /* Adjust the width of the image */
-    transform: rotate(-30deg);
     max-width: 500px; /* Set a maximum width for responsiveness */
 }
 
